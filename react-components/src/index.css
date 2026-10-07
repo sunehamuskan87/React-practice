@@ -20,6 +20,18 @@ body {
     padding: 20px;
     text-align: center;
 }
+.box{
+    display: flex;
+    justify-content: space-evenly;
+}
+.emplyeeCard {
+    
+    width: 20%;
+    border: 2px solid rgb(143, 128, 128);
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+}
 .footer {
     margin-top: 80px;
     text-align: center;
