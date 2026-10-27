@@ -12,7 +12,6 @@ const products = () => {
     <div>
       {items.map((product) => (
          <ProductCard key={product.id} product={product} />
-        
       ))}
 
     </div>
