@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.home {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.about {
+  box-shadow: 3px 3px 10px grey;
+  width: 80vw;
+  /* height: 80vh; */
+  margin: 30px auto 0;
+  border-radius: 15px;
+  padding: 20px 40px;
+}
+.about p, ul{
+  margin-bottom: 20px;
+  line-height: 2;
+}
+
+.products{
+  padding: 20px;
+  line-height: 2;
+}
+.products-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.searchbar{
+  padding: 10px;
+  width: 300px;
+  border: 1px solid black;
+  outline: 0;
+    font-size: 16px;
+}
+.searchbtn {
+  padding: 12px;
+  border: none;
+  outline: none;
+  background-color: rgb(56, 55, 55);
+  color: white;
+  /* font-weight: bold; */
+  font-size: 16px;
+}
+.searchbtn:hover {
+  background-color: rgb(113, 101, 101);
+  color: white;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+  margin: 10px;
+}
+.card {
+  width: 280px;
+  box-shadow: 3px 3px 10px grey;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 50%;
+}
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 10px grey;
+  width: 70%;
+  margin: 10% auto 0;
+  border-radius: 15px;
+  padding: 20px;
+}
+.details img {
+  width: 300px;
+}
+
+.stock-status {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+}
+.navbar {
+  background-color: rgb(56, 55, 55);
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar a{
+  color : white;
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 10px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.navbar a.active {
+  color: rgb(249, 39, 39);
+  font-weight: bold;
+}
+.navbar a:hover {
+  border-color: rgb(120, 114, 115);
+  transform: scale(1.05);
+}
+.pagination {
+  text-align: center;
+}
+.pagination button {
+  width: 100px;
+  margin: 20px 0;
+  padding: 12px;
+  border: none;
+  outline: none;
+  background-color: rgb(56, 55, 55);
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.pagination button:hover {
+  background-color: rgb(113, 101, 101);
+  color: white;
+}
+.pagination button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.backBtn {
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  
+}
