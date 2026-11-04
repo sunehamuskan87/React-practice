@@ -13,6 +13,7 @@ const Notes = () => {
 
   return (
     <div>
+      <input type="text" placeholder='Search'/>
       <h2>Notes</h2>
       {notesList.length > 0? (
         <div>
