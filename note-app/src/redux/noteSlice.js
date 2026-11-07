@@ -11,24 +11,22 @@ const noteSlice = createSlice({
         addNote: (state, action) => {
             state.notes.push(action.payload);
             localStorage.setItem("notes", JSON.stringify(state.notes))
-            toast.success("Note Added successfully", {position: 'top-center', autoClose: 3000, theme: 'dark'})
+            toast.success("Note Added successfully", {position: 'top-center', autoClose: 3000, theme: 'light'})
         },
         editNote: (state, action) => {
             const note = action.payload;
             const index = state.notes.findIndex((item) => item.id === note.id)
             state.notes[index] = note
             localStorage.setItem("notes", JSON.stringify(state.notes))
-            toast.success("Note updated successfully", {position: 'top-center', autoClose: 3000, theme: 'dark'})
+            toast.success("Note updated successfully", {position: 'top-center', autoClose: 3000, theme: 'light'})
         },
         deleteNote: (state, action) => {
             const note = action.payload;
             state.notes = state.notes.filter((item) => item.id !== note.id)
             localStorage.setItem("notes", JSON.stringify(state.notes))
-            toast.success("Note deleted successfully", {position: 'top-center', autoClose: 3000, theme: 'dark'})
+            toast.success("Note deleted successfully", {position: 'top-center', autoClose: 3000, theme: 'light'})
         }
-        // resetNote: (state) => {
-
-        // }
+        
     }
 })
 

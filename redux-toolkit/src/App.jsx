@@ -33,7 +33,6 @@ const App = () => {
           <p>{item.name} - {item.price}</p>
           <p>Quantity: {item.quantity}</p>
           <button onClick={()=>dispatch(removeFromCart(item))}>Remove Product</button>
-         
         </div>
       ))}
     </div>

@@ -7,7 +7,7 @@ import ViewNotes from './components/ViewNotes'
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-orange-50 w-screen h-screen'>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

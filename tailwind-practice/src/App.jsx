@@ -1,6 +1,7 @@
 import React from 'react'
-import { useState } from 'react'
-
+// import { useState } from 'react'
+// import PracticePage from './component/PracticePage'
+import ProfileCard from './component/ProfileCard'
 
 // const App = () => {
 //   return (
@@ -11,17 +12,26 @@ import { useState } from 'react'
 //   )
 // }
 
-const [darktheme, setTheme] = useState(false)
+// const [darktheme, setTheme] = useState(false)
+// const App = () => {
+//   return (
+//     <>
+//     <h1>{darktheme ? "Dark Mode" : "Light Mode"}</h1>
+//     <button onclick={()=>{
+//       setTheme(!darktheme)
+//     }}>Change Theme</button>
+//     </>
+    
+//   )
+// }
+
+
 const App = () => {
   return (
-    <>
-    <h1>{darktheme ? "Dark Mode" : "Light Mode"}</h1>
-    <button onclick={()=>{
-      setTheme(!darktheme)
-    }}>Change Theme</button>
-    </>
-    
+    <div>
+      {/* <PracticePage /> */}
+      <ProfileCard />
+    </div>
   )
 }
-
 export default App
