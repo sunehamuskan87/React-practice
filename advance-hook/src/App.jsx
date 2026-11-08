@@ -1,8 +1,9 @@
-// import React from 'react'
-// import { useState } from 'react';
-// import SearchButton from './component/SearchButton';
-// import { useCallback } from 'react';
-// import AddToCart from './component/AddToCart';
+import React from 'react'
+import { useState } from 'react';
+import SearchButton from './component/SearchButton';
+import { useCallback } from 'react';
+import AddToCart from './component/AddToCart';
+import Products from './component/Products';
 
 // const App = () => {
 //   const [count, setCount] = useState(0);
@@ -13,9 +14,9 @@
 //     console.log("Count increased to:", count);
 //   }
 
-// //   const handleSearch = () =>{
-// //     console.log("Search for: ", search);
-// //   }
+//   // const handleSearch = () =>{
+//   //   console.log("Search for: ", search);
+//   // }
 //   const handleSearch = useCallback(()=>{
 //     console.log("Search for: ", search);
 //   },[search])
@@ -39,16 +40,24 @@
 // }
 
 // export default App
-import React from 'react'
-import VideoPlatPause from './component/VideoPlatPause'
+// import React from 'react'
+// import VideoPlatPause from './component/VideoPlatPause'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <VideoPlatPause />
+//     </div>
+//   )
+// }
 
 const App = () => {
   return (
     <div>
-      <VideoPlatPause />
+      <Products />
+      {/* <SearchButton /> */}
     </div>
   )
 }
-
 export default App
 
