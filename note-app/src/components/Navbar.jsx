@@ -1,10 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router'
-import {Moon, BookHeart} from 'lucide-react'
+import {Moon, BookHeart, Sun} from 'lucide-react'
 
-const Navbar = () => {
+const Navbar = ({theme, toggleTheme}) => {
+
   return (
-    <div className='bg-orange-50 flex justify-between items-center border-b border-neutral-300 shadow-sm px-18 h-15'>
+    <div className={`${theme === 'light' ? 'bg-orange-50 text-gray-800' : 'bg-gray-800 text-white'} flex justify-between items-center border-b border-neutral-300 shadow-sm px-18 h-15`}>
         <h1 className='flex items-center gap-1 font-serif font-bold text-2xl'><BookHeart className='text-orange-500'/>Evernote</h1>
         <div className='flex gap-8 h-full'>
           <NavLink to='/'
@@ -18,7 +19,7 @@ const Navbar = () => {
             My Notes
           </NavLink>
         </div>
-        <button><Moon /></button>
+        <button onClick={toggleTheme}>{theme === 'light' ? <Moon /> : <Sun />}</button>
 
     </div>
   )

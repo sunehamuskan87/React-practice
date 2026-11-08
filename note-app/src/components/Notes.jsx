@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router';
 import { useDispatch } from 'react-redux';
 import { deleteNote } from '../redux/noteSlice'
 import { Link } from 'react-router'
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo } from 'react'
 
-const Notes = () => {
+const Notes = ({theme}) => {
   const [search, setSearch] = useState('');
   const notesList = useSelector((state) => state.notebook.notes);
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Notes = () => {
   console.log(searchNotes);
 
   return (
-    <div className='p-10'>
+    <div className={`${theme === 'light' ? 'bg-orange-50 text-gray-800' : 'bg-gray-800 text-white'} p-10`}>
       <div className='flex justify-between'>
         <div className='flex flex-col gap-1'>
           <h2 className='font-serif font-semibold text-3xl'>My Notes</h2>
@@ -44,7 +44,7 @@ const Notes = () => {
                     <button
                       key={note.id}
                       onClick={() => navigate(`./${note.id}`)}
-                      className="block w-full bg-olive-50 p-2 text-left"
+                      className={`text-gray-800 block w-full bg-olive-50 p-2 text-left`}
                     >
                       {note.title}
                     </button>
@@ -63,20 +63,20 @@ const Notes = () => {
         <div className='grid grid-cols-3 gap-8 mt-4 px-8'>
           {notesList.map((note, index) => (
             <div key={`${note.id}-${index}`} className='border p-3 border border-neutral-300 shadow-sm rounded-lg bg-olive-50'>
-              <h3 className='text-xl font-bold mb-2'>{note.title}</h3>
+              <h3 className={`text-gray-800 text-xl font-bold mb-2`}>{note.title}</h3>
               <p className='text-gray-500 line-clamp-3'>{note.content}</p>
               <p className='text-gray-400 mt-2 text-sm'>Created at: {note.createdAt}</p>
 
               <div className='mt-4 border-t  border-gray-200 flex justify-around'>
                 <button onClick={() => {
                   navigate(`./${note.id}`)
-                }} className='border-none mt-1 p-2 rounded-lg hover:text-orange-500 hover:font-semibold cursor-pointer text-sm'><Eye className='inline size-4' /> View</button>
+                }} className={`text-gray-800 border-none mt-1 p-2 rounded-lg hover:text-orange-500 hover:font-semibold cursor-pointer text-sm`}><Eye className='inline size-4' /> View</button>
 
                 <Link to={`/?noteId=${note?.id}`}>
-                  <button className='border-none mt-1 p-2 rounded-lg hover:text-orange-500 hover:font-semibold cursor-pointer text-sm'><Pencil className='inline size-4' /> Edit</button>
+                  <button className={`text-gray-800 border-none mt-1 p-2 rounded-lg hover:text-orange-500 hover:font-semibold cursor-pointer text-sm`}><Pencil className='inline size-4' /> Edit</button>
                 </Link>
 
-                <button onClick={() => dispatch(deleteNote(note))} className='border-none mt-1 p-2 rounded-lg hover:text-orange-500 hover:font-semibold cursor-pointer text-sm'><Trash className='inline size-4' /> Delete</button>
+                <button onClick={() => dispatch(deleteNote(note))} className={`text-gray-800 border-none mt-1 p-2 rounded-lg hover:text-orange-500 hover:font-semibold cursor-pointer text-sm`}><Trash className='inline size-4' /> Delete</button>
               </div>
             </div>
           ))}
