@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <div className=''>
 
-      <form action="" className='bg-olive-50 w-[50%] h-[50%] mx-auto my-20 p-6 border border-neutral-300 shadow-sm rounded-lg'>
+      <form action="" className='bg-olive-50 w-[50%] h-[50%] mx-auto my-20 p-6 border border-neutral-300 shadow-sm rounded-lg max-lg:w-[70%] h-[70%]'>
 
         <label htmlFor="title" className='block text-gray-400 text-sm mb-1'>TITLE</label>
         <input id="title" type="text" placeholder='Give your note a title...' value={title} onChange={(e) => {
@@ -60,7 +60,7 @@ const Home = () => {
         }} className='border border-neutral-300 block w-[100%] p-2 rounded-lg shadow-sm text-gray-500 mt-4 outline-none focus:border-orange-500 focus:border-2'></textarea>
 
         <div className='flex justify-end'>
-          <button onClick={createNote} className='bg-orange-500 text-white px-4 py-2 rounded-lg mt-4 cursor-pointer'>{id ? "Update" : "Add Note"}</button>
+          <button onClick={createNote} className='bg-orange-500 text-white px-4 py-2 rounded-lg mt-4 cursor-pointer max-sm:px-2 max-sm:py-1'>{id ? "Update" : "Add Note"}</button>
         </div>
         
       </form>
